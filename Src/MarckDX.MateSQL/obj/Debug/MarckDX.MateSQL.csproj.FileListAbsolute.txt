@@ -1,9 +1,0 @@
-D:\Repositorios\MarckDX.MateSQL\MarckDX.MateSQL\bin\Debug\MarckDX.MateSQL.dll.config
-D:\Repositorios\MarckDX.MateSQL\MarckDX.MateSQL\bin\Debug\MarckDX.MateSQL.dll
-D:\Repositorios\MarckDX.MateSQL\MarckDX.MateSQL\bin\Debug\MarckDX.MateSQL.pdb
-D:\Repositorios\MarckDX.MateSQL\MarckDX.MateSQL\bin\Debug\MySql.Data.dll
-D:\Repositorios\MarckDX.MateSQL\MarckDX.MateSQL\bin\Debug\Google.Protobuf.dll
-D:\Repositorios\MarckDX.MateSQL\MarckDX.MateSQL\bin\Debug\MySql.Data.xml
-D:\Repositorios\MarckDX.MateSQL\MarckDX.MateSQL\bin\Debug\Google.Protobuf.xml
-D:\Repositorios\MarckDX.MateSQL\MarckDX.MateSQL\obj\Debug\MarckDX.MateSQL.dll
-D:\Repositorios\MarckDX.MateSQL\MarckDX.MateSQL\obj\Debug\MarckDX.MateSQL.pdb
