@@ -3,8 +3,6 @@
 
 ![GitHub License](https://img.shields.io/github/license/brokenegg-io/Brokenegg.MateSQL)
 [![Version](https://img.shields.io/badge/version-1.1.0-brightgreen.svg)](https://semver.org)
-![Actions](https://github.com/brokenegg-io/Brokenegg.MateSQL/actions/workflows/ci.yml/badge.svg)
-![Actions](https://github.com/brokenegg-io/Brokenegg.MateSQL/actions/workflows/release.yml/badge.svg)
 ![GitHub branch checks state](https://img.shields.io/github/checks-status/brokenegg-io/Brokenegg.MateSQL/dev)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/brokenegg-io/Brokenegg.MateSQL)
 [![NuGet Downloads](https://img.shields.io/nuget/dt/Brokenegg.MateSQL.svg)](https://www.nuget.org/packages/Brokenegg.MateSQL/)
