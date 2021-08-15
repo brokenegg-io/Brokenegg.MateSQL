@@ -10,8 +10,9 @@ namespace Brokenegg.MateSQL
 {
     public class DBConnection
     {
-         public string Password { get; set; }
+        public string Password { get; set; }
         public MySqlConnection Connection { get; set; }
+        public DBConfig Config { get; set; }
      
         public bool IsConnect()
         {
@@ -53,5 +54,7 @@ namespace Brokenegg.MateSQL
         {
             this.Connection.Close();
         }
+
+        public DBConfig Instance(DBConfig config) => config;
     }
 }

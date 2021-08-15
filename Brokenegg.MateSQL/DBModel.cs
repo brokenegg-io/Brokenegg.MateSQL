@@ -35,12 +35,8 @@ namespace Brokenegg.MateSQL
 
         public Int32 Insert()
         {
-            return Insert(this.Config);
-        }
-        public Int32 Insert(DBConfig Config)
-        {
             DBCommand Command = DBCommand.GenerateInsert(this, this.MyType, this.TableName);
-            return Command.ExecuteInsert(Config);
+            return Command.ExecuteInsert(new DBConfig());
         }
         
         public List<T> Get<T>(Int32 Id)

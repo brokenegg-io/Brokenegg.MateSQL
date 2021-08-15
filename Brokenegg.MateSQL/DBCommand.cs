@@ -132,14 +132,12 @@ namespace Brokenegg.MateSQL
 
         public static MySqlDataReader RunQueryCommand(DBConfig Config, String SQLCommand)
         {
-            var dbCon = DBConnection.Instance(Config);
-            return RunQueryCommand(dbCon, SQLCommand);
+            return RunQueryCommand(Config, SQLCommand);
         }
 
         public static Int32 RunNoQueryCommand(DBConfig Config, String SQLCommand)
         {
-            var dbCon = DBConnection.Instance(Config);
-            return RunNoQueryCommand(dbCon, SQLCommand);
+            return RunNoQueryCommand(Config, SQLCommand);
         }
 
         #endregion

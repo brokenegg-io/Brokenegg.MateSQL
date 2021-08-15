@@ -7,7 +7,7 @@ namespace Brokenegg.MateSQL
 {
     public class DBConfig
     {
-
+        public DBConfig() { }
         public DBConfig(string server, string user, string password, string database)
         {
             DBConfig.Server = server;
@@ -15,6 +15,11 @@ namespace Brokenegg.MateSQL
             DBConfig.Password = password;
             DBConfig.Database = database;
         }
+
+        public string GetServer() => DBConfig.Server;
+        public string GetPassword() => DBConfig.Password;
+        public string GetDatabase() => DBConfig.Database;
+        public string GetUser() => DBConfig.User;
 
         public static String Server { get; set; }
         public static String User { get; set; }
