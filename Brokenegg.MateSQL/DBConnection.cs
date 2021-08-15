@@ -1,6 +1,8 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Brokenegg.MateSQL.Exceptions;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 
@@ -8,31 +10,9 @@ namespace Brokenegg.MateSQL
 {
     public class DBConnection
     {
-        private DBConfig DatabaseConfig;
-
-        public DBConnection(DBConfig DatabaseConfig)
-        {
-            this.DatabaseConfig = DatabaseConfig;
-        }
-
-        public string Password { get; set; }
-        private MySqlConnection connection = null;
-        public MySqlConnection Connection
-        {
-            get { return connection; }
-        }
-
-        private static DBConnection _instance = null;
-
-        public static DBConnection Instance(DBConfig DatabaseConfig)
-        {
-            if (_instance == null)
-                _instance = new DBConnection(DatabaseConfig);
-            return _instance;
-        }
-
-
-
+         public string Password { get; set; }
+        public MySqlConnection Connection { get; set; }
+     
         public bool IsConnect()
         {
             try
@@ -40,15 +20,15 @@ namespace Brokenegg.MateSQL
                 bool result = true;
                 if (Connection == null)
                 {
-                    if (String.IsNullOrEmpty(this.DatabaseConfig.Database))
+                    if (String.IsNullOrEmpty(DBConfig.Database))
                     {
                         result = false;
                     }
                     else
                     {
                         string connstring = GetDBString();
-                        connection = new MySqlConnection(connstring);
-                        connection.Open();
+                        this.Connection = new MySqlConnection(connstring);
+                        this.Connection.Open();
                         result = true;
                     }
                 }
@@ -57,7 +37,7 @@ namespace Brokenegg.MateSQL
             }
             catch (Exception ex)
             {
-                return false;
+                throw new ConnectionException(ex.Message);
             }
         }
 
@@ -66,14 +46,12 @@ namespace Brokenegg.MateSQL
             String extraCommandTemp = ";charset = utf8; convertzerodatetime = true;";
             String extraCommand = extra ? extraCommandTemp : String.Empty;
 
-            return string.Format("Server={0}; database={1}; UID={2}; password={3} {4}",
-                     DatabaseConfig.Server, DatabaseConfig.Database, DatabaseConfig.User, DatabaseConfig.Password, extraCommand);
+            return $"Server={DBConfig.Server}; database={DBConfig.Database}; UID={DBConfig.User}; password={DBConfig.Password} {extraCommand}";
         }
 
         public void Close()
         {
-            connection.Close();
-            _instance = null;
+            this.Connection.Close();
         }
     }
 }
