@@ -2,7 +2,7 @@
 
 
 ![GitHub License](https://img.shields.io/github/license/brokenegg-io/Brokenegg.MateSQL)
-[![Version](https://img.shields.io/badge/version-1.1.0-brightgreen.svg)](https://semver.org)
+[![Version](https://img.shields.io/badge/version-2.0.0-brightgreen.svg)](https://semver.org)
 ![GitHub branch checks state](https://img.shields.io/github/checks-status/brokenegg-io/Brokenegg.MateSQL/dev)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/brokenegg-io/Brokenegg.MateSQL)
 [![NuGet Downloads](https://img.shields.io/nuget/dt/Brokenegg.MateSQL.svg)](https://www.nuget.org/packages/Brokenegg.MateSQL/)
@@ -88,7 +88,7 @@ Please make sure to update tests as appropriate.
 
 ## Roadmap
 
-- [ ] Port from .Net Framework 4.5.1 to DotNet 5. Planned to v2.0.0;
+- [ ] Port from .Net Framework 4.5.1 to DotNet 5. Planned to v5.0.0;
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
