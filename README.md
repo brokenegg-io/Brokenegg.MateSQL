@@ -47,11 +47,10 @@ public class User : MateSQL.Autenticable
 ### Initializing DBConfig
 
 ```csharp
-DBConfig Conf = new DBConfig();
-Conf.Database = "database";
-Conf.Password = "password";
-Conf.User = "username";
-Conf.Server = "serverip";
+DBConfig.Database = "database";
+DBConfig.Password = "password";
+DBConfig.User = "username";
+DBConfig.Server = "serverip";
 ```
 
 ## Instantiating object
